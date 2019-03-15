@@ -1,0 +1,6 @@
+body{background-color:#b0c4de}
+p{color:#ffffff;font-size:30px;font-family:標楷體}
+.my p{color:black;font-size:18px}
+#b1,#b2,#b3,#b4,#b5{border-radius:5px;margin:10px;padding:1px;font-family:新細明體}
+#b6{border-radius:5px;margin:10px;padding:1px;font-family:新細明體;width:20em}
+#b7{float:right;margin:5px}
