@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+h3 {font-size:40px;}	
+body{background-color:#d0e4fe;}
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    cursor: pointer;
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+    background-color: red;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
+</style>
+</head>
+<body>
+  <div class="navbar">
+  <a href="#home">登入會員</a>
+  <a href="#news">報名</a>
+  <div class="dropdown">
+    <button class="dropbtn" onclick="myFunction()">項目介紹
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content" id="myDropdown">
+      <a href="#">美術</a>
+      <a href="#">音樂</a>
+      <a href="#">運動</a>
+    </div>
+  </div> 
+</div>
+
+	<h3><center>遊樂世界</center></h3>
+	<p><center>畫畫.運動.音樂.多種休閒娛樂</center></p>
+	<center>
+	<img border="0" src="https://m.golla.tw/img/6/d43/cGcq5CMtgUN1ATNwETMy8SOxgDM1EzLn1WasxWYvMHZh9GbwV3LnJ3bu0manpnLp9yL6MHc0RHa.jpg" alt="Pulpit rock" width="200" height="150">
+    <img border="0" src="https://pic.pimg.tw/dream518830/1383065203-580487105.jpg" alt="Pulpit rock" width="200" height="150">
+	<img border="0" src="https://truth.bahamut.com.tw/s01/201303/bd0183132af225200bc8e2ed39aa89a1.PNG" alt="Pulpit rock" width="200" height="150">
+	<img border="0" src="data:image/png;base64,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" alt="Pulpit rock" width="200" height="150">
+	</center>
+<img id="ball" src="http://www.conti.com.tw/UploadFile/GoodPic/141947204324608_thumb.jpg" alt="The Scream" style="display:none" width="20" height="10">
+<center> <P>假如你想知道更多消息,記得加入會員喔!</P></center>
+<center><div class="my">
+	<P> Name:<input id="b1",type="text" name="yourname"></P>
+    <P>Sex:<input type="radio" name="sex" value="male"> Male<input type="radio" name="sex" value="female">Female</P>
+	<P>Years old:<input id="b2" type="number" name="quantity" min="1" max="100"></P>
+	<P> Birthday:<input id="b3" type="date" name="bday"></P>
+	<P> Email:<input id="b4" type="email" name="usermail"></P>
+    <P>School:<input id="b5" list="browsers" name="browser"></P>
+	<P>My websit:<input id="b6" type="website" name="userwebsite"></P>
+	<P><button id="b7">送出</button></P>
+	</div></center>
+<canvas id="myCanvas" width="300" height="297" style="border:1px solid #d3d3d3;"/>
+<script>
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+    var myDropdown = document.getElementById("myDropdown");
+      if (myDropdown.classList.contains('show')) {
+        myDropdown.classList.remove('show');
+      }
+  }
+}
+var img, ctx, canvas;
+var x=0, y=0;
+
+window.onload = main;
+
+var dx = 2, dy=2;
+function update() {
+  x+=dx; y+=dy;
+  if (x < 0 && dx < 0)
+    dx = -1 * dx;
+  else if (x+img.width >= canvas.width && dx > 0)
+    dx = -1 * dx;
+  if (y < 0 && dy < 0)
+    dy = -1 * dy;
+  else if (y+img.height >= canvas.height && dy > 0)
+    dy = -1 * dy;
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.drawImage(img, x, y);
+}
+
+function main() {
+  img = document.getElementById("ball");
+  canvas = document.getElementById("myCanvas");
+  ctx = canvas.getContext("2d");
+  var loop = function() {
+    update();
+    draw();
+    window.requestAnimationFrame(loop, canvas);
+  };
+  window.requestAnimationFrame(loop, canvas);
+}
+</script>
+</body>
+</html>
